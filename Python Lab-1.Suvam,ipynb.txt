@@ -1,0 +1,792 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XFPtnPWKLBBx",
+        "outputId": "451f4f51-1335-4fe9-a6bc-27028b066d84"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Celsius: 10\n",
+            "Fahrenheit: 50.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "#1no.Celsius to Fahrenheit\n",
+        "cel = float (input(\"Celsius: \"))\n",
+        "fah = (cel * 1.8) + 32\n",
+        "print(\"Fahrenheit:\",fah)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2no.Swap two number\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "print(\"Before swapping:\",num1,num2)\n",
+        "temp = num1\n",
+        "num1 = num2\n",
+        "num2 = temp\n",
+        "print(\"After swapping:\",num1,num2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Lt5uTHWNL6KN",
+        "outputId": "acea7e0a-53f7-4825-c872-99d6354ee841"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 10\n",
+            "Enter second number: 20\n",
+            "Before swapping: 10 20\n",
+            "After swapping: 20 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3no.Leap year or not\n",
+        "year = int(input(\"Enter a year: \"))\n",
+        "if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:\n",
+        "    print(\"Leap year!\")\n",
+        "else:\n",
+        "    print(\"Not a leap year!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vMzUW5TUMQ-X",
+        "outputId": "4485066b-e50c-478c-e53c-126d8b48f120"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a year: 2023\n",
+            "Not a leap year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4no.Reverse a year\n",
+        "year = int(input(\"Enter a year: \"))\n",
+        "rev = 0\n",
+        "while year > 0:\n",
+        "    digit = year % 10\n",
+        "    rev = rev * 10 + digit\n",
+        "    year = year // 10\n",
+        "print(\"Reversed year:\",rev)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "edzAQZ7fMv8D",
+        "outputId": "10991047-bbde-481d-dbe5-90699167b67b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a year: 2023\n",
+            "Reversed year: 3202\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5no.Factors of given no.\n",
+        "num = int(input(\"Enter a number:\"))\n",
+        "for i in range(1,num+1):\n",
+        "    if num % i == 0:\n",
+        "        print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x7xx0SyzN_1q",
+        "outputId": "145f118f-f011-451a-b090-2d0412773fb5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number:6\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6no.Generate prime number upto series n\n",
+        "start = int(input(\"Enter starting number: \"))\n",
+        "end = int(input(\"Enter ending number:\"))\n",
+        "for number in range(start,end+1):\n",
+        "    if number > 1:\n",
+        "        for j in range(2,number):\n",
+        "            if (number % j) == 0:\n",
+        "                break\n",
+        "        else:\n",
+        "            print(number)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Anmq-2bsO-T6",
+        "outputId": "0aae0e06-2d6f-47c5-f178-c108e621ed82"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter starting number: 10\n",
+            "Enter ending number:20\n",
+            "11\n",
+            "13\n",
+            "17\n",
+            "19\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " #7no.Display all which are divisible of 7 but not multiple of 5 between 1000-2000\n",
+        "\n",
+        "for number in range(1000, 2001):\n",
+        "    if number % 7 == 0 and number % 5 != 0:\n",
+        "        print(number)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e8fUWqFiQ9E1",
+        "outputId": "c0285715-3fc9-463d-d942-3ee554ef3d31"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1001\n",
+            "1008\n",
+            "1022\n",
+            "1029\n",
+            "1036\n",
+            "1043\n",
+            "1057\n",
+            "1064\n",
+            "1071\n",
+            "1078\n",
+            "1092\n",
+            "1099\n",
+            "1106\n",
+            "1113\n",
+            "1127\n",
+            "1134\n",
+            "1141\n",
+            "1148\n",
+            "1162\n",
+            "1169\n",
+            "1176\n",
+            "1183\n",
+            "1197\n",
+            "1204\n",
+            "1211\n",
+            "1218\n",
+            "1232\n",
+            "1239\n",
+            "1246\n",
+            "1253\n",
+            "1267\n",
+            "1274\n",
+            "1281\n",
+            "1288\n",
+            "1302\n",
+            "1309\n",
+            "1316\n",
+            "1323\n",
+            "1337\n",
+            "1344\n",
+            "1351\n",
+            "1358\n",
+            "1372\n",
+            "1379\n",
+            "1386\n",
+            "1393\n",
+            "1407\n",
+            "1414\n",
+            "1421\n",
+            "1428\n",
+            "1442\n",
+            "1449\n",
+            "1456\n",
+            "1463\n",
+            "1477\n",
+            "1484\n",
+            "1491\n",
+            "1498\n",
+            "1512\n",
+            "1519\n",
+            "1526\n",
+            "1533\n",
+            "1547\n",
+            "1554\n",
+            "1561\n",
+            "1568\n",
+            "1582\n",
+            "1589\n",
+            "1596\n",
+            "1603\n",
+            "1617\n",
+            "1624\n",
+            "1631\n",
+            "1638\n",
+            "1652\n",
+            "1659\n",
+            "1666\n",
+            "1673\n",
+            "1687\n",
+            "1694\n",
+            "1701\n",
+            "1708\n",
+            "1722\n",
+            "1729\n",
+            "1736\n",
+            "1743\n",
+            "1757\n",
+            "1764\n",
+            "1771\n",
+            "1778\n",
+            "1792\n",
+            "1799\n",
+            "1806\n",
+            "1813\n",
+            "1827\n",
+            "1834\n",
+            "1841\n",
+            "1848\n",
+            "1862\n",
+            "1869\n",
+            "1876\n",
+            "1883\n",
+            "1897\n",
+            "1904\n",
+            "1911\n",
+            "1918\n",
+            "1932\n",
+            "1939\n",
+            "1946\n",
+            "1953\n",
+            "1967\n",
+            "1974\n",
+            "1981\n",
+            "1988\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8no.Palindrome or not\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "rev = 0\n",
+        "temp = num\n",
+        "\n",
+        "while temp > 0:\n",
+        "    digit = temp % 10\n",
+        "    rev = (rev * 10) + digit\n",
+        "    temp = temp // 10\n",
+        "\n",
+        "if num == rev:\n",
+        "    print(\"Palindrome\")\n",
+        "else:\n",
+        "    print(\"Not a palindrome\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yy5eMRIIab-7",
+        "outputId": "623773c1-5152-49ed-e0d8-9bd10b06d033"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 232\n",
+            "Palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9no.Check wheather Perfect no. and Armstrong no.\n",
+        "\n",
+        "number = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "sum_of_divisors = 0\n",
+        "for i in range(1, number):\n",
+        "    if number % i == 0:\n",
+        "        sum_of_divisors += i\n",
+        "\n",
+        "if sum_of_divisors == number:\n",
+        "    print(f\"{number} is a perfect number\")\n",
+        "else:\n",
+        "    print(f\"{number} is not a perfect number\")\n",
+        "\n",
+        "# Check for Armstrong Number\n",
+        "num_str = str(number)\n",
+        "num_digits = len(num_str)\n",
+        "sum_of_powers = 0\n",
+        "\n",
+        "for digit in num_str:\n",
+        "    sum_of_powers += int(digit) ** num_digits\n",
+        "\n",
+        "if sum_of_powers == number:\n",
+        "    print(f\"{number} is an Armstrong number\")\n",
+        "else:\n",
+        "    print(f\"{number} is not an Armstrong number\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3XzTQjaDc2ZJ",
+        "outputId": "3b3a61ca-c7cc-4cc4-9837-0b165258cab3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 6\n",
+            "6 is a perfect number\n",
+            "6 is an Armstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10no.Fibbonacci series up to n\n",
+        "\n",
+        "n = int(input(\"Enter the max value for Fibonacci series: \"))\n",
+        "\n",
+        "a, b = 0, 1\n",
+        "\n",
+        "print(\"Fibonacci series up to\", n, \":\")\n",
+        "while a <= n:\n",
+        "    print(a, end=\" \")\n",
+        "    a, b = b, a + b\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8z4U_GCGd035",
+        "outputId": "60d4589b-79a8-4c4f-eff1-fbd18fed5693"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the max value for Fibonacci series: 5\n",
+            "Fibonacci series up to 5 :\n",
+            "0 1 1 2 3 5 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 1. Write a  program to print your name.\n",
+        "print('Aniket Roy')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zZUA9FIbYjc9",
+        "outputId": "e748290c-2509-43f7-faae-b5745db7b46e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Aniket Roy\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2. Write a  program to add two numbers.\n",
+        "num1 = int(input(\"Enter first number:\"))\n",
+        "num2 = int(input(\"Enter second number:\"))\n",
+        "sum = num1+num2\n",
+        "print (f\"{num1}+{num2}=\",sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H4YWfg8xYl-y",
+        "outputId": "9487be5b-64cc-4191-bdc1-d04ac14641ba"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number:10\n",
+            "Enter second number:20\n",
+            "10+20= 30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3. Write a  program to change temperature from Fahrenheit to Celsius.\n",
+        "\n",
+        "fah = float(input(\"Enter temperature in Fahrenheit: \"))\n",
+        "\n",
+        "cel = (fah - 32) * 5/9\n",
+        "\n",
+        "# Print the result\n",
+        "print(f\"{fah} degrees F is equal to {cel:.2f} degrees C.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F4nawdtPYntW",
+        "outputId": "15a1f76b-91b1-4e43-aaa5-b9bbe52dc09b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in Fahrenheit: 87\n",
+            "87.0 degrees F is equal to 30.56 degrees C.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Write a  program to find area and perimeter of a rectangle.\n",
+        "\n",
+        "l = float(input(\"Enter length : \"))\n",
+        "w = float(input(\"Enter width : \"))\n",
+        "\n",
+        "\n",
+        "area = l * w\n",
+        "peri = 2 * (l + w)\n",
+        "\n",
+        "\n",
+        "print(f\"  Rectangle:\\n Area : {area:.2f}\\nPerimeter: {peri:.2f}\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6W_OuJdsYvAe",
+        "outputId": "9c214df6-208b-4751-eaf2-20fd869aab73"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter length : 5\n",
+            "Enter width : 5\n",
+            "  Rectangle:\n",
+            " Area : 25.00\n",
+            "Perimeter: 20.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Write a  program to find area and perimeter of a circle.\n",
+        "r = float(input(\"Enter radius : \"))\n",
+        "\n",
+        "area = 3.14 * r**2\n",
+        "peri = 2 * 3.14 * r\n",
+        "\n",
+        "print(f\"  Circle:\\n Area : {area:.2f}\\nPerimeter: {peri:.2f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cC0jMmtuY23S",
+        "outputId": "c052396e-41f8-4621-8274-511cfd87b55f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter radius : 5\n",
+            "  Circle:\n",
+            " Area : 78.50\n",
+            "Perimeter: 31.40\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6.Write a Program to display whether a number is odd or even.\n",
+        "num =  int(input(\"Enter number:\"))\n",
+        "if num%2 == 0:\n",
+        "    print (f\"{num} is Even!\")\n",
+        "else :\n",
+        "    print (f\"{num} is Odd!\")\n"
+      ],
+      "metadata": {
+        "id": "DqUjdQ4qY6Ey",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "78ad5ac3-252a-4be6-9a02-34614b41dc22"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number:10\n",
+            "10 is Even!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7. Write a Program to check if a number is Positive or Negative.\n",
+        "num =  int(input(\"Enter number:\"))\n",
+        "if num == 0:\n",
+        "    print (f\"{num} is Zero!\")\n",
+        "elif num < 0 :\n",
+        "    print (f\"{num} is Negative!\")\n",
+        "else :\n",
+        "    print (f\"{num} is Positive!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "trlzcsy8Y8JC",
+        "outputId": "d0bb0745-2698-4ca9-d209-c3a2f55fdaf3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number:10\n",
+            "10 is Positive!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8.Write a  program to find maximum of three numbers.\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "num3 = int(input(\"Enter third number: \"))\n",
+        "\n",
+        "if num1 > num2 and num1 > num3:\n",
+        "    print(f'{num1} is greater than {num2} and {num3}!')\n",
+        "elif num2 > num1 and num2 > num3:\n",
+        "    print(f'{num2} is greater than {num1} and {num3}!')\n",
+        "else:\n",
+        "    print(f'{num3} is greater than {num1} and {num2}!')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SNNjhpIFY9Ti",
+        "outputId": "250faf01-8006-46ca-feaa-091a0b4ef1ef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 5\n",
+            "Enter second number: 8\n",
+            "Enter third number: 65\n",
+            "65 is greater than 5 and 8!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9.Write a program to convert miles to kilometers.\n",
+        "mil = float (input(\"Enter Mile:\"))\n",
+        "kilo = mil*1.60934\n",
+        "\n",
+        "print(f\"kilometer:{kilo:.2f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QqqDcw_0ZABu",
+        "outputId": "8dd8758e-ebca-4b8d-d877-0993b3b4fab1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Mile:25\n",
+            "kilometer:40.23\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10.  Write a program for following grading system.\n",
+        "# Note:   Percentage>=90%  :  Grade A\n",
+        "# Percentage>=80%   :  Grade B\n",
+        "# Percentage>=70%   :  Grade C\n",
+        "# Percentage>=60%   :  Grade D\n",
+        "# Percentage>=40%   :  Grade E\n",
+        "# Percentage<40%     :  Grade F\n",
+        "\n",
+        "per = float(input(\"Enter Percentage: \"))\n",
+        "\n",
+        "if per >= 90:\n",
+        "    print(\"Grade A\")\n",
+        "elif per >= 80:\n",
+        "    print(\"Grade B\")\n",
+        "elif per >= 70:\n",
+        "    print(\"Grade C\")\n",
+        "elif per >= 60:\n",
+        "    print(\"Grade D\")\n",
+        "elif per >= 40:\n",
+        "    print(\"Grade E\")\n",
+        "else:\n",
+        "    print(\"Grade F\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vf-qM1hVZBD3",
+        "outputId": "cbe4b4ba-5df3-43ae-e018-918244201717"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Percentage: 98\n",
+            "Grade A\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
